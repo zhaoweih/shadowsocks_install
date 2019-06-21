@@ -38,10 +38,10 @@ cur_dir=$( pwd )
 software=(Shadowsocks-Python ShadowsocksR Shadowsocks-Go Shadowsocks-libev)
 
 libsodium_file="libsodium-1.0.17"
-libsodium_url="https://github.com/jedisct1/libsodium/releases/download/1.0.17/libsodium-1.0.17.tar.gz"
+libsodium_url="http://sg.zhaoweihao.ml:8082/shadowsocks/libsodium-1.0.17.tar.gz"
 
 mbedtls_file="mbedtls-2.16.0"
-mbedtls_url="https://tls.mbed.org/download/mbedtls-2.16.0-gpl.tgz"
+mbedtls_url="http://sg.zhaoweihao.ml:8082/shadowsocks/mbedtls-2.16.0-gpl.tgz"
 
 shadowsocks_python_file="shadowsocks-master"
 shadowsocks_python_url="https://github.com/shadowsocks/shadowsocks/archive/master.zip"
@@ -405,7 +405,7 @@ error_detect_depends(){
     ${command} > /dev/null 2>&1
     if [ $? -ne 0 ]; then
         echo -e "[${red}Error${plain}] Failed to install ${red}${depend}${plain}"
-        echo "Please visit: https://teddysun.com/486.html and contact."
+        echo "Please visit: https://github.com/zhaoweih/Shadowsocks-Tutorial and contact."
         exit 1
     fi
 }
@@ -901,7 +901,7 @@ install_shadowsocks_python(){
     else
         echo
         echo -e "[${red}Error${plain}] ${software[0]} install failed."
-        echo "Please visit: https://zhaoweihao.com/2019/05/21/%E7%BB%99%E5%B0%8F%E7%99%BD%E7%9A%84Shadowsocks%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B(%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC)/ and contact."
+        echo "Please visit: https://github.com/zhaoweih/Shadowsocks-Tutorial and contact."
         install_cleanup
         exit 1
     fi
@@ -923,7 +923,7 @@ install_shadowsocks_r(){
     else
         echo
         echo -e "[${red}Error${plain}] ${software[1]} install failed."
-        echo "Please visit; https://zhaoweihao.com/2019/05/21/%E7%BB%99%E5%B0%8F%E7%99%BD%E7%9A%84Shadowsocks%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B(%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC)/ and contact."
+        echo "Please visit; https://github.com/zhaoweih/Shadowsocks-Tutorial and contact."
         install_cleanup
         exit 1
     fi
@@ -963,7 +963,7 @@ install_shadowsocks_go(){
     else
         echo
         echo -e "[${red}Error${plain}] ${software[2]} install failed."
-        echo "Please visit: https://zhaoweihao.com/2019/05/21/%E7%BB%99%E5%B0%8F%E7%99%BD%E7%9A%84Shadowsocks%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B(%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC)/ and contact."
+        echo "Please visit: https://github.com/zhaoweih/Shadowsocks-Tutorial and contact."
         install_cleanup
         exit 1
     fi
@@ -986,7 +986,7 @@ install_shadowsocks_libev(){
     else
         echo
         echo -e "[${red}Error${plain}] ${software[3]} install failed."
-        echo "Please visit: https://zhaoweihao.com/2019/05/21/%E7%BB%99%E5%B0%8F%E7%99%BD%E7%9A%84Shadowsocks%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B(%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC)/ and contact."
+        echo "Please visit: https://github.com/zhaoweih/Shadowsocks-Tutorial and contact."
         install_cleanup
         exit 1
     fi
@@ -1015,7 +1015,7 @@ install_shadowsocks_libev_obfs(){
         make install
         if [ ! "$(command -v obfs-server)" ]; then
             echo -e "[${red}Error${plain}] simple-obfs for ${software[${selected}-1]} install failed."
-            echo "Please visit: https://zhaoweihao.com/2019/05/21/%E7%BB%99%E5%B0%8F%E7%99%BD%E7%9A%84Shadowsocks%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B(%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC)/ and contact."
+            echo "Please visit: https://github.com/zhaoweih/Shadowsocks-Tutorial and contact."
             install_cleanup
             exit 1
         fi
@@ -1154,7 +1154,7 @@ install_main(){
     fi
 
     echo
-    echo "Welcome to visit: https://zhaoweihao.com/2019/05/21/%E7%BB%99%E5%B0%8F%E7%99%BD%E7%9A%84Shadowsocks%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B(%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC)/"
+    echo "Welcome to visit: https://github.com/zhaoweih/Shadowsocks-Tutorial"
     echo "Enjoy it!"
     echo
 }
