@@ -57,14 +57,15 @@ shadowsocks_r_config="/etc/shadowsocks-r/config.json"
 shadowsocks_r_centos="https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR"
 shadowsocks_r_debian="https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR-debian"
 
+# Modify go version by zhaoweihao
 shadowsocks_go_file_64="shadowsocks-server-linux64-1.2.2"
-shadowsocks_go_url_64="https://dl.lamp.sh/shadowsocks/shadowsocks-server-linux64-1.2.2.gz"
+shadowsocks_go_url_64="http://sg.zhaoweihao.ml:8082/shadowsocks/shadowsocks-server-linux64-1.2.2.gz"
 shadowsocks_go_file_32="shadowsocks-server-linux32-1.2.2"
-shadowsocks_go_url_32="https://dl.lamp.sh/shadowsocks/shadowsocks-server-linux32-1.2.2.gz"
+shadowsocks_go_url_32="http://sg.zhaoweihao.ml:8082/shadowsocks/shadowsocks-server-linux32-1.2.2.gz"
 shadowsocks_go_init="/etc/init.d/shadowsocks-go"
 shadowsocks_go_config="/etc/shadowsocks-go/config.json"
-shadowsocks_go_centos="https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-go"
-shadowsocks_go_debian="https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-go-debian"
+shadowsocks_go_centos="https://raw.githubusercontent.com/zhaoweih/shadowsocks_install/master/shadowsocks-go"
+shadowsocks_go_debian="https://raw.githubusercontent.com/zhaoweih/shadowsocks_install/master/shadowsocks-go-debian"
 
 shadowsocks_libev_init="/etc/init.d/shadowsocks-libev"
 shadowsocks_libev_config="/etc/shadowsocks-libev/config.json"
@@ -900,7 +901,7 @@ install_shadowsocks_python(){
     else
         echo
         echo -e "[${red}Error${plain}] ${software[0]} install failed."
-        echo "Please visit: https://teddysun.com/486.html and contact."
+        echo "Please visit: https://zhaoweihao.com/2019/05/21/%E7%BB%99%E5%B0%8F%E7%99%BD%E7%9A%84Shadowsocks%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B(%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC)/ and contact."
         install_cleanup
         exit 1
     fi
@@ -922,7 +923,7 @@ install_shadowsocks_r(){
     else
         echo
         echo -e "[${red}Error${plain}] ${software[1]} install failed."
-        echo "Please visit; https://teddysun.com/486.html and contact."
+        echo "Please visit; https://zhaoweihao.com/2019/05/21/%E7%BB%99%E5%B0%8F%E7%99%BD%E7%9A%84Shadowsocks%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B(%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC)/ and contact."
         install_cleanup
         exit 1
     fi
@@ -962,7 +963,7 @@ install_shadowsocks_go(){
     else
         echo
         echo -e "[${red}Error${plain}] ${software[2]} install failed."
-        echo "Please visit: https://teddysun.com/486.html and contact."
+        echo "Please visit: https://zhaoweihao.com/2019/05/21/%E7%BB%99%E5%B0%8F%E7%99%BD%E7%9A%84Shadowsocks%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B(%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC)/ and contact."
         install_cleanup
         exit 1
     fi
@@ -985,7 +986,7 @@ install_shadowsocks_libev(){
     else
         echo
         echo -e "[${red}Error${plain}] ${software[3]} install failed."
-        echo "Please visit: https://teddysun.com/486.html and contact."
+        echo "Please visit: https://zhaoweihao.com/2019/05/21/%E7%BB%99%E5%B0%8F%E7%99%BD%E7%9A%84Shadowsocks%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B(%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC)/ and contact."
         install_cleanup
         exit 1
     fi
@@ -1014,7 +1015,7 @@ install_shadowsocks_libev_obfs(){
         make install
         if [ ! "$(command -v obfs-server)" ]; then
             echo -e "[${red}Error${plain}] simple-obfs for ${software[${selected}-1]} install failed."
-            echo "Please visit: https://teddysun.com/486.html and contact."
+            echo "Please visit: https://zhaoweihao.com/2019/05/21/%E7%BB%99%E5%B0%8F%E7%99%BD%E7%9A%84Shadowsocks%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B(%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC)/ and contact."
             install_cleanup
             exit 1
         fi
@@ -1153,7 +1154,7 @@ install_main(){
     fi
 
     echo
-    echo "Welcome to visit: https://teddysun.com/486.html"
+    echo "Welcome to visit: https://zhaoweihao.com/2019/05/21/%E7%BB%99%E5%B0%8F%E7%99%BD%E7%9A%84Shadowsocks%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B(%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC)/"
     echo "Enjoy it!"
     echo
 }
